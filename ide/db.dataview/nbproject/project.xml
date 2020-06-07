@@ -151,13 +151,45 @@
                 </test-type>
             </test-dependencies>
             <friend-packages>
-                <friend>org.netbeans.modules.etl.editor</friend>
                 <friend>org.netbeans.modules.db.core</friend>
                 <friend>org.netbeans.modules.dm.virtual.db</friend>
                 <friend>org.netbeans.modules.edm.editor</friend>
+                <friend>org.netbeans.modules.etl.editor</friend>
                 <package>org.netbeans.modules.db.dataview.api</package>
                 <package>org.netbeans.modules.db.dataview.spi</package>
             </friend-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/commons-compress-1.20.jar</runtime-relative-path>
+                <binary-origin>external/commons-compress-1.20.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/commons-math3-3.6.1.jar</runtime-relative-path>
+                <binary-origin>external/commons-math3-3.6.1.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/commons-csv-1.8.jar</runtime-relative-path>
+                <binary-origin>external/commons-csv-1.8.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/xmlbeans-3.1.0.jar</runtime-relative-path>
+                <binary-origin>external/xmlbeans-3.1.0.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/poi-ooxml-4.1.2.jar</runtime-relative-path>
+                <binary-origin>external/poi-ooxml-4.1.2.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/poi-4.1.2.jar</runtime-relative-path>
+                <binary-origin>external/poi-4.1.2.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/commons-collections4-4.4.jar</runtime-relative-path>
+                <binary-origin>external/commons-collections4-4.4.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/ooxml-schemas-1.4.jar</runtime-relative-path>
+                <binary-origin>external/ooxml-schemas-1.4.jar</binary-origin>
+            </class-path-extension>
         </data>
     </configuration>
 </project>
