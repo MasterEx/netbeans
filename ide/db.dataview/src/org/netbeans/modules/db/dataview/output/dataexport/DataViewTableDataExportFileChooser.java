@@ -43,8 +43,7 @@ public class DataViewTableDataExportFileChooser {
     private static final List<DataExporter> EXPORTERS = Arrays.asList(
             CSVDataExporter.INSTANCE,
             TSVDataExporter.INSTANCE,
-            XLSXDataExporter.INSTANCE,
-            XLSDataExporter.INSTANCE
+            XLSXDataExporter.INSTANCE
     );
 
     public static void extractAsFile(final JTable table) {

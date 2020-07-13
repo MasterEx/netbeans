@@ -18,7 +18,10 @@
  */
 package org.netbeans.modules.db.dataview.output.dataexport;
 
+import java.sql.SQLException;
 import javax.swing.JTable;
+import org.netbeans.modules.db.dataview.util.FileBackedClob;
+import org.openide.util.Exceptions;
 
 /**
  * Data export utility methods.
@@ -64,7 +67,16 @@ public class DataExportUtils {
         Object[][] contents = new Object[table.getRowCount()][table.getColumnCount()];
         for (int i = 0; i < table.getRowCount(); i++) {
             for (int j = 0; j < table.getColumnCount(); j++) {
-                contents[i][j] = table.getValueAt(i, j);
+                if (table.getValueAt(i, j) instanceof FileBackedClob) {
+                    FileBackedClob lob = (FileBackedClob) table.getValueAt(i, j);
+                    try {
+                        contents[i][j] = lob.getSubString(1, (int) lob.length());
+                    } catch (SQLException ex) {
+                        Exceptions.printStackTrace(ex);
+                    }
+                } else {
+                    contents[i][j] = table.getValueAt(i, j);
+                }
             }
         }
         return contents;

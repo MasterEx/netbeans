@@ -51,7 +51,7 @@ public class XLSXDataExporterTest extends AbstractDataExporterTestBase {
             try ( XSSFWorkbook wb2 = new XSSFWorkbook(getGoldenFile())) {
                 String workbookA = new XSSFExcelExtractor(wb1).getText();
                 String workbookB = new XSSFExcelExtractor(wb2).getText();
-                assertEquals("XLSX Content Missmatch", workbookB, workbookA);
+                assertEquals("XLSX Content Mismatch", workbookB, workbookA);
             }
         }
     }
